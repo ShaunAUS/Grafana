@@ -1,0 +1,29 @@
+
+logging:
+  level:
+    hello.controller: debug
+
+management:
+  server:
+    port: 8080
+    tomcat:
+      mbeanregistry:
+        enabled: true
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: false
+    health:
+      show-components: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+
+
+
